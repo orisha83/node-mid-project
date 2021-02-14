@@ -1,0 +1,23 @@
+<html>
+
+<body>
+    <h1>Welcome to the Movies Login Page</h1>
+
+    <h3>Please enter your credentioals below:</h3>
+
+    <form action="login/getdata" method="POST">
+
+        <%if (msg) { %>
+            <h4><%= msg %></h4>
+        <% } %>
+
+        User : <input type="text" name="username"><br/>
+        Password : <input type="password" name="pwd"> <br/>
+        
+        <input type="submit" value="Log in">
+        
+    </form>
+
+</body>
+
+</html>

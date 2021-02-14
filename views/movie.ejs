@@ -1,0 +1,21 @@
+<html>
+
+<body>
+    <h1>Welcome to the Movie page</h1>
+
+    Movie ID : <%= movie.id %><br/>
+    Movie Name : <%= movie.name %><br/>
+    Movie Genres : <%= movie.genres %><br/>
+    Movie Language : <%= movie.language %><br/>
+
+    <%if (movie.image) { %>
+        <img src="<%= movie.image.medium %>"><br/><br/>
+    <% } %>
+    
+
+    <input type="button" onclick="location.href='/main';" value="Back to Menu" /><br/><br/>
+    <input type="button" value="Back to Search results" onclick="history.back()">
+
+</body>
+
+</html>

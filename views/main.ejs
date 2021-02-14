@@ -1,0 +1,18 @@
+<html>
+
+<body>
+    <h1>Welcome to the Movies system</h1>
+
+    <a href="/movies/searchMovies">Search For Movies</a> <br/>
+    <a href="/movies/createMovie">Create new Movie</a> <br/>
+
+    <%if (isUserAnAdmin) { %>
+        <a href="/usersManagment">Edit Users</a> <br/>
+    <% } %>
+
+    <br/><br/>
+
+    <a href="/login">Log Out</a> <br/>
+</body>
+
+</html>

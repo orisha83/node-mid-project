@@ -1,0 +1,40 @@
+<html>
+
+<body>
+    <h1>User Data Page</h1>
+    <form action="/usersManagment/getUserData/<%= action %>" method="POST">
+
+        <%if (foundUser) { %>
+            <input type="hidden" name="userId"  value="<%= foundUser.id %>"/>
+            User Name :
+            <input type="text" value="<%= foundUser.userName %>" name="userName"/><br/><br/>
+            Password :
+            <input type="text" value="<%= foundUser.password %>" name="password"/><br/><br/>
+            User Type :
+            <input type="text" value="<%= foundUser.type %>" name="userType"/><br/><br/>
+            Created Date : 
+            <input type="text" value="<%= foundUser.createdDate %>" name="createdDate"/><br/><br/>
+            Number Of Transactions : 
+            <input type="text" value="<%= foundUser.numOfTransactions %>" name="numberOfTransactions"/><br/><br/>
+
+            <input type="submit" value="Update" name="Update">
+
+        <% } else{ %>
+             User Name : 
+            <input type="text" name="userName"/><br/><br/>
+             Password : 
+            <input type="text" name="password"/><br/><br/>
+            User Type : 
+            <input type="text" name="userType"/><br/><br/>
+            Created Date : 
+            <input type="text" name="createdDate"/><br/><br/>
+            Number Of Transactions : 
+            <input type="text" name="numberOfTransactions"/><br/><br/>
+
+            <input type="submit" value="Create" name="Create">
+            
+        <% } %>
+    </form>
+</body>
+
+</html>

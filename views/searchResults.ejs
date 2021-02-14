@@ -1,0 +1,28 @@
+<html>
+
+<body>
+    <h1>Search Results Page</h1>
+    <table border="1">
+        <tr>
+          <th>Movie Name</th>
+          <th>Other Movies with the same genre</th>
+        </tr>
+        <% foundMovies.map(function(elem) { -%>
+        <tr>
+            <td><a href="/movies/<%= elem.movieId %>"><%= elem.movieName %></a></td>
+            <td>
+                <ul>
+                    <% elem.sameGenreMoviesArray.forEach(function(item) { %>
+                        <li><a href="/movies/<%= item.id %>"><%= item.name %></a></li>
+                    <% })  %>
+                </ul>
+            </td>
+        </tr>
+        <% } ) -%>  
+    </table><br/><br/>
+    <input type="button" onclick="location.href='/main';" value="Back to Menu" /><br/><br/>
+
+</body>
+
+</html>
+

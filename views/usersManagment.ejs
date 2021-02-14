@@ -1,0 +1,16 @@
+<html>
+
+<body>
+    <h1>Users Managment Page</h1>
+
+    <ul>
+        <% allUsers.forEach(function(item) { %>
+            <li><%= item.userName %>,  <a href="/usersManagment/delete/<%= item.id %>">Delete</a> ,  <a href="/usersManagment/update/<%= item.id %>">Update</a></li>
+        <% })  %>
+    </ul>
+    <br/><br/>
+
+    <input type="button" onclick="location.href='/usersManagment/userData';" value="Add New" />
+</body>
+
+</html>

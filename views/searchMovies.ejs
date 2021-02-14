@@ -1,0 +1,28 @@
+<html>
+
+<body>
+    <h1>Search Movies Page</h1>
+    <form action="searchMovies/getSearchData" method="POST">
+        Name : <input type="text" name="movieName"> <br/><br/>
+
+        <label for="genres">Genre:</label>
+        <select name="genres" id="genres">
+            <option></option>
+            <% allMoviesGenres = allMoviesGenres.map(function(elem) { -%>
+                return <option value="<%= elem %>"><%= elem %></option>;
+            <% } ) -%>      
+        </select><br/><br/>
+
+        <label for="languages">language:</label>
+        <select name="languages" id="languages">
+            <option></option>
+            <% allMoviesLanguages = allMoviesLanguages.map(function(elem) { -%>
+                return <option value="<%= elem %>"><%= elem %></option>;
+            <% } ) -%>      
+        </select><br/><br/>
+
+        <input type="submit" value="Search">
+    </form>
+</body>
+
+</html>
